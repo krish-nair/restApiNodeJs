@@ -1,0 +1,15 @@
+{
+  "name": "restapinodejs",
+  "version": "1.0.0",
+  "description": "RestApi with nodeJs express and mongodb ",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon app.js"
+  },
+  "author": "Krish Nair",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "nodemon": "^1.19.1"
+  }
+}

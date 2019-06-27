@@ -15,9 +15,11 @@ app.get("/", (req, res) => {
 //import route
 const postsRoute = require("./routes/posts");
 const userRoute = require("./routes/users");
+const coursesRoute = require("./routes/courses");
 
 app.use("/posts", postsRoute);
 app.use("/users", userRoute);
+app.use("/courses", coursesRoute);
 
 app.get("/customers", (req, res) => {
   res.send("<h1>You are on customers page</h1>");

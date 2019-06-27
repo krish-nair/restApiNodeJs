@@ -3,8 +3,13 @@ const User = require("../models/userData");
 
 const router = express.Router();
 
-router.get("/", (req, res) => {
-  res.send("<h1>You are on users page...</h1>");
+router.get("/", async (req, res) => {
+  try {
+    const users = await User.find();
+    res.json(users);
+  } catch (err) {
+    res.send({ message: err });
+  }
 });
 
 router.post("/", async (req, res) => {
